@@ -1,0 +1,33 @@
+@import "../resources/colors";
+@import "../resources/animation.scss";
+
+.interactiveFlip {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  flex-wrap: wrap;
+  height: 320px;
+
+  .itemFlip {
+    .buttonFlip {
+      cursor: pointer;
+      transition: all .4s;
+  
+      .iconButton {
+        font-size: 3em;
+        transition: all .3s;
+      }
+  
+      &:hover {
+        .iconButton {
+          font-size: 3.5em;
+        }
+      }
+    }
+  
+    .infoFlip {
+      position: absolute;
+      top: 0;
+    }
+  }
+}

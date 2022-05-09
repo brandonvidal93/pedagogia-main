@@ -4,8 +4,7 @@ import { useDrop } from 'react-dnd';
 const style = {
 }
 
-const DropWord = ({ posY, posX, type, size, id, color }) => {
-  // console.log(color);
+const DropWord = ({ posY, posX, type, size, id, color, total }) => {
   const [{ canDrop, isOver }, drop] = useDrop({
     accept: type,
     drop: () => ({ name: type, id }),
@@ -20,9 +19,9 @@ const DropWord = ({ posY, posX, type, size, id, color }) => {
   }
   // 'top': posY, 'left': posX, 'width': size
   return (
-    <div className = 'dF-C-cc boxDrop mB-2' ref = { drop } style = {{ ...style }} id = { 'boxDrop-' + id + '-' + type } >
-
-    </div>
+    (id !== total) ? 
+    <div className = 'dF-C-cc boxDrop mB-2' ref = { drop } style = {{ ...style }} id = { 'boxDrop-' + id + '-' + type } ></div> : 
+    <div className = 'dF-C-cc boxDropFnal' ref = { drop } style = {{ ...style }} id = { 'boxDrop-' + id + '-' + type } ></div>
   )
 }
 export default DropWord;

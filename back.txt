@@ -1,0 +1,188 @@
+{
+            multimedia.questions[this.state.question].type === '' &&
+            <div className='d-Flex aI-C'>
+              <div id='BoxQuestions'>
+                {
+                  multimedia.questions[this.state.question].options.map((choice, i) => {
+                    return(
+                      <div className = 'option mB-05 d-Flex j-S aI-C' key = {i} id = { 'Op-' + (i) }>
+                        <span className = { 'fa-layers icon mR-1 ' + (multimedia.questions[this.state.question].type === 'FV' ? 'dNone' : '') } id = { 'icon-' + (i) }>
+                          <FontAwesomeIcon icon="circle" className = 'circle color-6' />
+                          <p className = { 'typeLabel' }>{ choice.type }</p>
+                        </span>
+
+                        <span className = { 'fa-layers iconCheck mR-1 dNone ' + (multimedia.questions[this.state.question].type === 'FV' ? 'dNone' : '')} id = { 'iCheck-' + (i) }>
+                          <FontAwesomeIcon icon="circle" className = 'circle' />
+                          <FontAwesomeIcon icon="check" inverse transform="shrink-6" className = 'check' />
+                        </span>
+
+                        <span className = { 'fa-layers iconError mR-1 dNone ' + (multimedia.questions[this.state.question].type === 'FV' ? 'dNone' : '')} id = { 'iError-' + (i) }>
+                          <FontAwesomeIcon icon="circle" className = 'circle' />
+                          <FontAwesomeIcon icon="times" inverse transform="shrink-6" className = 'check' />
+                        </span>
+
+                        <p className = {'labelStatement optionAct3 ' + (choice.type === 'VR' ? 'labelTrue fw-7 mR-05 ': '') + (choice.type === 'FR' ? 'labelFalse fw-7 mL-05': '') } id = { 'option-' + (i) } value = { choice.value } dangerouslySetInnerHTML = {{ __html: choice.text }} onClick = { this.actividadHandle }></p>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </div>
+          }
+
+
+          ,
+                {
+                  "key": 4,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": " 4. El uso de didácticas innovadoras es una tarea fundamental que se le solicita a un profesor en la IUSH.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 4,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 5,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "5. La evaluación del aprendizaje en la IUSH tiene por enfoque central valorar la memoria de los estudiantes.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 5,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Falso",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 6,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "6. La evaluación del desempeño del profesor se realiza por los usuarios del servicio, por sus pares y él mismo, generando si es del caso un plan de mejoramiento.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 6,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 7,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "7. La IUSH ofrece a la sociedad programas técnicos, tecnológicos, profesionales y de posgrado.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 7,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 8,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "8. Un docente adscrito a una Escuela reporta directamente a la Vicerrectoría Académica.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 8,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Falso",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 9,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "9. El documento Institucional donde se define la misión, la visión, los valores y demás elementos del horizonte institucional es el plan estratégico de desarrollo.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 9,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Falso",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 10,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "10. Para la IUSH es muy relevante que cada uno de los profesores sea experto en un área o áreas del saber.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 10,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                }

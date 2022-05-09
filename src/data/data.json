@@ -66,58 +66,58 @@
 
   "page2": {
     "type": "pageCourse",
-    "title"   : "¡Bienvenidos!",
-    "text"    : "",
+    "title": "¡Bienvenidos!",
+    "text": "",
     "background": {
       "bg": "img/2/bgPage-2.png"
     },
     "multimedia": [
       {
-        "urlImgBtn"   : "img/2/unid-1.png",
+        "urlImgBtn": "img/2/unid-1.png",
         "pos": {
-          "top"       : 110,
-          "left"      : 260
+          "top": 110,
+          "left": 260
         },
         "itemInfo": {
-          "title"     : "",
-          "text"      : "Para la <b>Institución Universitaria Salazar y Herrera,</b> es placentero y estimulante poder contar con la prestación de servicios de personas que como usted, engrosan las filas de esta comunidad académica al servicio de la <b>educación de nuestros estudiantes y para la sociedad en general.</b>",
+          "title": "",
+          "text": "Para la <b>Institución Universitaria Salazar y Herrera,</b> es placentero y estimulante poder contar con la prestación de servicios de personas que como usted, engrosan las filas de esta comunidad académica al servicio de la <b>educación de nuestros estudiantes y para la sociedad en general.</b>",
           "posGlobe": {
-            "posY"    : -66,
-            "posX"    : 100
+            "posY": -66,
+            "posX": 100
           },
-          "color"     : "#5C657C"
+          "color": "#5C657C"
         }
       },
       {
-        "urlImgBtn"   : "img/2/unid-2.png",
+        "urlImgBtn": "img/2/unid-2.png",
         "pos": {
-          "top"       : 110,
-          "left"      : 490
+          "top": 110,
+          "left": 490
         },
         "itemInfo": {
-          "title"     : "",
-          "text"      : "En la presente inducción, se reconocerán algunos de los elementos primordiales a tener presente en <b>nuestro actuar profesional y profesoral.</b> Se invita a prestar atención al espacio interactivo diseñado para usted e igualmente a hacer lectura de los documentos institucionales necesarios en nuestro quehacer docente, Proyecto Educativo Institucional y Modelo Pedagógico Integrador.",
+          "title": "",
+          "text": "En la presente inducción, se reconocerán algunos de los elementos primordiales a tener presente en <b>nuestro actuar profesional y profesoral.</b> Se invita a prestar atención al espacio interactivo diseñado para usted e igualmente a hacer lectura de los documentos institucionales necesarios en nuestro quehacer docente, Proyecto Educativo Institucional y Modelo Pedagógico Integrador.",
           "posGlobe": {
-            "posY"    : -66,
-            "posX"    : 330
+            "posY": -66,
+            "posX": 330
           },
-          "color"     : ""
+          "color": ""
         }
       },
       {
-        "urlImgBtn"   : "img/2/unid-3.png",
+        "urlImgBtn": "img/2/unid-3.png",
         "pos": {
-          "top"       : 110,
-          "left"      : 720
+          "top": 110,
+          "left": 720
         },
         "itemInfo": {
-          "title"     : "",
-          "text"      : "Surtidos los dos pasos anteriores se invita a realizar el cuestionario donde se medirá la comprensión de los elementos más relevantes de este proceso de inducción, no sin antes explicitar que posterior a este momento de inducción virtual, se desarrollarán momentos personalizados donde se aclararon dudas y se ofrecerán lineamientos para su actuación en la <b>IUSH.</b>",
+          "title": "",
+          "text": "Surtidos los dos pasos anteriores se invita a realizar el cuestionario donde se medirá la comprensión de los elementos más relevantes de este proceso de inducción, no sin antes explicitar que posterior a este momento de inducción virtual, se desarrollarán momentos personalizados donde se aclararon dudas y se ofrecerán lineamientos para su actuación en la <b>IUSH.</b>",
           "posGlobe": {
-            "posY"    : -70,
-            "posX"    : 600
+            "posY": -70,
+            "posX": 600
           },
-          "color"     : ""
+          "color": ""
         }
       }
     ],
@@ -240,7 +240,6 @@
     "title": "¿Qué se espera de un(a) docente de la IUSH?",
     "text": "Te invitamos a que sigas esta conversación y conozcas la información.",
     "img": "img/4/unid-1.png",
-    
 
     "instruction": {
       "type": "mouse",
@@ -343,7 +342,7 @@
 
           "color": "#487FAE",
           "trian": "trian-1"
-        }        
+        }
       },
       {
         "urlImgBtn": "img/5/unid-2.png",
@@ -497,10 +496,10 @@
           "text": "",
           "img": "img/9/check.png"
         },
-        "error" : {
-          "title" : "¡Intenta de nuevo!",
-          "text" : "",
-          "img" : "img/9/error.png"
+        "error": {
+          "title": "¡Intenta de nuevo!",
+          "text": "",
+          "img": "img/9/error.png"
         }
       },
       "questions": [
@@ -508,293 +507,306 @@
           "type": "LabelDnD",
           "instruction": "",
           "statement": "",
-          "labelDnD":{
+          "labelDnD": {
             "dragItem": [
-          {
-            "id": 1,
-            "text": "Falso",
-            "img": "img/9/error.png",
-            "color": "#D0D62D"
-           },
-          {
-          "id": 2,
-          "text": "Verdadero",
-          "img": "img/9/check.png",
-          "color": "#7BAF2D"
-          }
-      ],
-      "dropZone": {
-        "imgCheck": "img/9/check.png",
-        "textCheck": "¡Bien!",
-        "textError": "¡Intenta de nuevo!",
-        "paragraph": [
-          {
-            "key": 1,
-            "lines": [
               {
-                "key": 1,
-                "text": "1. Los lineamientos pedagógicos que adopta la IUSH son principalmente los que indica la Secretaria de Educación de Medellín.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
+                "id": 1,
+                "text": "Falso",
+                "img": "img/9/error.png",
+                "color": "#D0D62D"
+              },
               {
-                "key": 1,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 150,
-                "size": 85,
-                "type": "Falso",
-                "color": "#1B927C"
-              }
-            ]
-          },
-          {
-            "key": 2,
-            "lines": [
-              {
-                "key": 1,
-                "text": "2. En términos ideológicos y filosóficos, la base central del ideario institucional IUSH, se encuentra en los Objetivos de Desarrollo Sustentable.",
-                "posY": 30,
-                "posX": 30
-              }
-            ],
-            "drops": [
-              {
-                "key": 2,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 139,
-                "size": 85,
-                "type": "Falso",
-                "color": "#0F511A"
-              }
-            ]
-          },
-          {
-            "key": 3,
-            "lines": [
-              {
-                "key": 1,
-                "text": "3. Dos elementos centrales del enfoque pedagógico IUSH son el desarrollo de capacidades y el desarrollo de competencias.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
-              {
-                "key": 3,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 53,
-                "size": 64,
-                "type": "Verdadero",
+                "id": 2,
+                "text": "Verdadero",
+                "img": "img/9/check.png",
                 "color": "#7BAF2D"
               }
-            ]
-          },
-          {
-            "key": 4,
-            "lines": [
-              {
-                "key": 1,
-                "text": " 4. El uso de didácticas innovadoras es una tarea fundamental que se le solicita a un profesor en la IUSH.",
-                "posY": 30,
-                "posX": 40
-              }
             ],
-            "drops": [
+            "dropZone": {
+              "imgCheck": "img/9/check.png",
+              "textCheck": "¡Bien!",
+              "textError": "¡Intenta de nuevo!",
+              "paragraph": [
+                {
+                  "key": 1,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "1. Los lineamientos pedagógicos que adopta la IUSH son principalmente los que indica la Secretaria de Educación de Medellín.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 1,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 150,
+                      "size": 85,
+                      "type": "Falso",
+                      "color": "#1B927C"
+                    }
+                  ]
+                },
+                {
+                  "key": 2,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "2. En términos ideológicos y filosóficos, la base central del ideario institucional IUSH, se encuentra en los Objetivos de Desarrollo Sustentable.",
+                      "posY": 30,
+                      "posX": 30
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 2,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 139,
+                      "size": 85,
+                      "type": "Falso",
+                      "color": "#0F511A"
+                    }
+                  ]
+                },
+                {
+                  "key": 3,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "3. Dos elementos centrales del enfoque pedagógico IUSH son el desarrollo de capacidades y el desarrollo de competencias.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 3,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 53,
+                      "size": 64,
+                      "type": "Verdadero",
+                      "color": "#7BAF2D"
+                    }
+                  ]
+                },
+                {
+                  "key": 4,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": " 4. El uso de didácticas innovadoras es una tarea fundamental que se le solicita a un profesor en la IUSH.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 4,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 5,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "5. La evaluación del aprendizaje en la IUSH tiene por enfoque central valorar la memoria de los estudiantes.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 5,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Falso",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 6,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "6. La evaluación del desempeño del profesor se realiza por los usuarios del servicio, por sus pares y él mismo, generando si es del caso un plan de mejoramiento.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 6,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 7,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "7. La IUSH ofrece a la sociedad programas técnicos, tecnológicos, profesionales y de posgrado.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 7,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 8,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "8. Un docente adscrito a una Escuela reporta directamente a la Vicerrectoría Académica.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 8,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Falso",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 9,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "9. El documento Institucional donde se define la misión, la visión, los valores y demás elementos del horizonte institucional es el plan estratégico de desarrollo.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 9,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Falso",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 10,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "10. Para la IUSH es muy relevante que cada uno de los profesores sea experto en un área o áreas del saber.",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 10,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 182,
+                      "size": 100,
+                      "type": "Verdadero",
+                      "color": "#14604F"
+                    }
+                  ]
+                },
+                {
+                  "key": 11,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 11,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 17,
+                      "posX": 53,
+                      "size": 64,
+                      "type": "Verdadero",
+                      "color": "#7BAF2D"
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": [
               {
-                "key": 4,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 182,
-                "size": 100,
-                "type": "Verdadero",
-                "color": "#14604F"
-              }
-            ]
-          },
-          {
-            "key": 5,
-            "lines": [
-              {
-                "key": 1,
-                "text": "5. La evaluación del aprendizaje en la IUSH tiene por enfoque central valorar la memoria de los estudiantes.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
-              {
-                "key": 5,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 182,
-                "size": 100,
-                "type": "Falso",
-                "color": "#14604F"
-              }
-            ]
-          },
-          {
-            "key": 6,
-            "lines": [
-              {
-                "key": 1,
-                "text": "6. La evaluación del desempeño del profesor se realiza por los usuarios del servicio, por sus pares y él mismo, generando si es del caso un plan de mejoramiento.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
-              {
-                "key": 6,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 182,
-                "size": 100,
-                "type": "Verdadero",
-                "color": "#14604F"
-              }
-            ]
-          },
-          {
-            "key": 7,
-            "lines": [
-              {
-                "key": 1,
-                "text": "7. La IUSH ofrece a la sociedad programas técnicos, tecnológicos, profesionales y de posgrado.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
-              {
-                "key": 7,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 182,
-                "size": 100,
-                "type": "Verdadero",
-                "color": "#14604F"
-              }
-            ]
-          },
-          {
-            "key": 8,
-            "lines": [
-              {
-                "key": 1,
-                "text": "8. Un docente adscrito a una Escuela reporta directamente a la Vicerrectoría Académica.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
-              {
-                "key": 8,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 182,
-                "size": 100,
-                "type": "Falso",
-                "color": "#14604F"
-              }
-            ]
-          },
-          {
-            "key": 9,
-            "lines": [
-              {
-                "key": 1,
-                "text": "9. El documento Institucional donde se define la misión, la visión, los valores y demás elementos del horizonte institucional es el plan estratégico de desarrollo.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
-              {
-                "key": 9,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 182,
-                "size": 100,
-                "type": "Falso",
-                "color": "#14604F"
-              }
-            ]
-          },
-          {
-            "key": 10,
-            "lines": [
-              {
-                "key": 1,
-                "text": "10. Para la IUSH es muy relevante que cada uno de los profesores sea experto en un área o áreas del saber.",
-                "posY": 30,
-                "posX": 40
-              }
-            ],
-            "drops": [
-              {
-                "key": 10,
-                "box": "<div class = 'boxDrop'></div>",
-                "posY": 17,
-                "posX": 182,
-                "size": 100,
-                "type": "Verdadero",
-                "color": "#14604F"
+                "info": 1,
+                "img": "img/9/check.png",
+                "imgSize": 150,
+                "title": "¡Bien!",
+                "text": ""
               }
             ]
           }
-        ]
-      },
-      "content": [
-        {
-          "info": 1,
-          "img": "img/9/check.png",
-          "imgSize": 150,
-          "title": "¡Bien!",
-          "text": ""
         }
       ]
     }
-  }
-]
-},
-    "page10": {
-      "type": "endCourse",
-      "message": {
-        "success": {
-          "title": "¡Has llegado al final de este recorrido!",
-          "subTitle": "",
-          "module": "",
-          "courseName": "Estamos seguros que tienes nuevos aprendizajes y que pondrás en práctica todo lo aprendido."
-        },
-        "error": {
-          "title": "¡Has llegado al final de este recorrido!",
-          "subTitle": "¡Muchos éxitos!",
-          "module": "",
-          "courseName": "Estamos seguros que tienes nuevos aprendizajes y que pondrás en práctica todo lo aprendido."
-        }
+  },
+
+  "page10": {
+    "type": "endCourse",
+    "message": {
+      "success": {
+        "title": "¡Has llegado al final de este recorrido!",
+        "subTitle": "",
+        "module": "",
+        "courseName": "Estamos seguros que tienes nuevos aprendizajes y que pondrás en práctica todo lo aprendido."
       },
-      "logoCourse": "img/cover/logo-1.png",
-      "background": {
-        "bg": "img/cover/fondo-end.png"
-      },
-      "buttonEnd": "Finalizar"
-    }
+      "error": {
+        "title": "¡Has llegado al final de este recorrido!",
+        "subTitle": "¡Muchos éxitos!",
+        "module": "",
+        "courseName": "Estamos seguros que tienes nuevos aprendizajes y que pondrás en práctica todo lo aprendido."
+      }
+    },
+    "logoCourse": "img/cover/logo-1.png",
+    "background": {
+      "bg": "img/cover/fondo-end.png"
+    },
+    "buttonEnd": "Finalizar"
   }
 }
-
-  
-
-
-
-
-
-
-
-
 

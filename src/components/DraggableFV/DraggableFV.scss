@@ -9,8 +9,8 @@
       background-color: #86BF41;
       border-radius: 10px;
       top: 5px;
-      left: 49px;
-      width: 502px;
+      left: 7px;
+      width: 542px;
       height: 229px;
       h1 {
         color: #fff;
@@ -21,8 +21,8 @@
       background-color: #D00814;
       border-radius: 10px;
       top: 5px;
-      left: 49px;
-      width: 502px;
+      left: 7px;
+      width: 542px;
       height: 229px;
       h1 {
         color: #fff;
@@ -46,6 +46,20 @@
         &:before {
           content: '?';
           color: #fff;
+          font-size: 3rem;
+          font-weight: 700;
+        }
+      }
+
+      .boxDropFnal {
+        // width: 86px;
+        // height: 86px;
+        // background: #DEDEDE;
+        // border: 1px dotted #ACACAC;
+        // border-radius: 50px;
+        &:before {
+          content: 'Haz finalizado';
+          color: #ACACAC;
           font-size: 3rem;
           font-weight: 700;
         }

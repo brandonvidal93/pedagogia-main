@@ -19,57 +19,43 @@ library.add(fas, fab, far);
 class DraggableFV extends Component {
   state = {
     page: 1,
-    count1: 0,
-    count2: 0,
+    questState: false
   };
-  count1 = () => {
+  
+  questState = () => {
     this.setState({
-      count1: this.state.count1 + 1,
+      questState: !this.state.questState,
     })
   }
-  count2 = () => {
-    this.setState({
-      count2: this.state.count2 + 1,
-    });
-
-    if (this.state.count2 === 10) {
-      this.props.accumulatedPoints(this.state.count1/10);
-
-      // funcion setTimeout
-      setTimeout(() => {
-        this.props.nextQuestion();
-      }, 1000);
-    }
-  };
 
   mSlides = (e) => {
-    if (e.currentTarget.id === "btnAnt") {
-      this.setState({
-        page: this.state.page - 1,
-      });
-    }
-    if (e.currentTarget.id === "btnSig") {
+    const { multimedia, accumulatedPoints, nextQuestion, endQuiz } = this.props;
+
+    document.getElementById("contentWords").classList.remove("disabledSolid"); 
+    document.getElementById("boxCheck").classList.add("dNone");
+    document.getElementById("boxError").classList.add("dNone");
+
+    if(this.state.page > multimedia.dropZone.paragraph.length - 1) {
+      document.getElementById("contentWords").classList.add("disabledSolid"); 
+      endQuiz();
+    } else {
       this.setState({
         page: this.state.page + 1,
       });
-    
-    if (this.state.page === this.props.multimedia.dropZone.paragraph.length - 1 ) {     
-    }
-    
-    document.getElementById("boxCheck").classList.add("dNone");
-    document.getElementById("btnSig").classList.add("disabled");
-  }
-};
-  
-  countWords = (id) => {
-    if (this.state.page === this.props.multimedia.dropZone.paragraph.length) {
-      document.getElementById("contentWords").classList.add("disabledSolid");   
+
+      if(this.state.questState) {
+        accumulatedPoints();
+
+        this.questState();
+      }
+
+      nextQuestion(this.state.page);
     }
   };
   
   render() {
-    const { multimedia, question, nextQuestion, endQuiz} = this.props;
-    
+    const { multimedia } = this.props;
+
     return (
       <div className="draggableFV d-Flex j-S aI-S">
         <audio
@@ -83,13 +69,6 @@ class DraggableFV extends Component {
 
           <DndProvider backend = { HTML5Backend }>
           <div className = "contentSlide d-Flex j-C aI-C mT-1" id = "contentSlide">
-
-           <button className = { "buttonSlide mR-05 " + (this.state.page === 1 ? "disabled" : "disabled") } id = "btnAnt" onClick = { this.mSlides}>
-              <span className = "fa-layers fa-fw iconButton">
-                <FontAwesomeIcon icon="circle" />
-                <FontAwesomeIcon icon="chevron-left" inverse transform="shrink-6" />
-              </span>
-            </button> 
 
             {
               multimedia.dropZone.paragraph.map( (item, i) => {
@@ -106,6 +85,7 @@ class DraggableFV extends Component {
                             posX = { boxDrop.posX }
                             color = { boxDrop.color }
                             type = { boxDrop.type } 
+                            total = { multimedia.dropZone.paragraph.length }
                             />  
                         )
                       })
@@ -130,7 +110,7 @@ class DraggableFV extends Component {
               <h1>{ multimedia.dropZone.textError }</h1>
             </div>
 
-            <button className = { "buttonSlide mL-05 " + (this.state.page === multimedia.dropZone.paragraph.length ? "disabled" : "disabled") } id = "btnSig" onClick = {(multimedia.dropZone.paragraph.length - 1) === question ? nextQuestion : endQuiz}>
+            <button className = { "buttonSlide mL-05 disabled "} id = "btnSig" onClick = { this.mSlides }>
               <span className = "fa-layers fa-fw iconButton"  >
                 <FontAwesomeIcon icon="circle" />
                 <FontAwesomeIcon icon="chevron-right" inverse transform="shrink-6" />
@@ -138,7 +118,7 @@ class DraggableFV extends Component {
             </button>
           </div>
 
-          <div className = "contentWords d-Flex d-C j-C aI-S pL-2 mT-3" id = "contentWords" >
+          <div className = {"contentWords d-Flex d-C j-C aI-S pL-2 mT-3 " + (this.state.page >= multimedia.dropZone.paragraph.length ? 'disabledSolid' : '')} id = "contentWords" >
             {
               multimedia.dragItem.map( (item, i) => {
                 return(
@@ -150,9 +130,7 @@ class DraggableFV extends Component {
                       type = { item.text }
                       color = { item.color }
                       img = { item.img }
-                      count2 = { this.count2 }
-                      count1 = { this.count1 }
-                      countWords = { this.countWords }/>
+                      questState = { this.questState }/>
                     <h2 className = "mL-1 fw-7">{item.text}</h2>
                   </div>
                 )

@@ -573,7 +573,7 @@ class Page10 extends Component {
     }
 
     return(
-      <div className={ (dataPage.type) + ' animated fadeIn' } style = { style }>
+      <div className={ (dataPage.type) + ' animated fadeIn' } style = { style } >
         <div className="c-8 d-Flex d-C j-C aI-C">
           {
             dataPage.message.success.title ? <h1 className = 'mB-1 F2 titulo2 tCenter fw-7' dangerouslySetInnerHTML = {{ __html: calificacion >= 70 ? dataPage.message.success.title : dataPage.message.error.title }}></h1> : null

@@ -23,7 +23,7 @@ class Quiz1 extends Component {
     this.state = {
       question: 0,
       accumulatedPoints: 0,
-      totalPoints: props.multimedia.questions.length,
+      totalPoints: props.multimedia.questions[0].labelDnD.dropZone.paragraph.length,
       raw: 0,
       showModal: false,
       isNext: false,
@@ -35,26 +35,21 @@ class Quiz1 extends Component {
       `
       Question          : ${this.state.question}
       Accumulated Points: ${this.state.accumulatedPoints}
-      Total Points      : ${this.state.totalPoints}
+      Total Points      : ${(this.state.totalPoints - 1)}
       `
       );
-    }
-
-    isEnded = () => {
-    this.props.isEnded(true);
   }
 
-  accumulatedPoints = (points) => {
-    console.log(points);
+  accumulatedPoints = () => {
     this.setState({
-      accumulatedPoints: this.state.accumulatedPoints + points
+      accumulatedPoints: this.state.accumulatedPoints + 1,
     });
   }
 
-  nextQuestion = () => {
+  nextQuestion = (page) => {
     this.setState({
-      isNext: !this.state.isNext,
-      question: this.state.question + 1,
+      // isNext: !this.state.isNext,
+      question: page,
     });
   }
   
@@ -62,6 +57,10 @@ class Quiz1 extends Component {
     this.setState({
       showModal: !this.state.showModal
     })
+  }
+
+  isEnded = () => {
+    this.props.isEnded(true);
   }
 
   //FUNCION PARA CERRAR LA MODAL
@@ -77,68 +76,17 @@ class Quiz1 extends Component {
     this.isEnded();
   }
 
-  actividadHandle = (event) => {
-    const { questions } = this.props.multimedia;
-  
-    // SELECCION DEL ID DE LA OPCION
-    let idSelect = event.target.id;
-    // NUMERO ID 0, 1, 2, 3, ...
-    let numId = idSelect.substring(7, 8);
-
-    let typeQuestion = questions[this.state.question].type;
-
-    // console.log(this.state.question);
-
-    switch (typeQuestion) {
-      case 'single':
-        // console.log('Valor de la respuesta: ' + document.getElementById(idSelect).getAttribute('value'));
-        for (var i = 0; i < questions[this.state.question].options.length; i++) {
-          document.getElementsByClassName('icon')[i].classList.remove('dNone');
-          document.getElementsByClassName('iconCheck')[i].classList.add('dNone');
-          document.getElementsByClassName('iconError')[i].classList.add('dNone');
-          document.getElementsByClassName('optionAct3')[i].classList.remove('labelTrue');
-          document.getElementsByClassName('optionAct3')[i].classList.remove('labelFalse');
-        }
-        //QUITAR LA SELECCION DE LA OPCIÓN
-
-        // VALIDAR QUE LA RESPUESTA ES CORRECTA
-        if (document.getElementById(idSelect).getAttribute('value') === 'true') {
-          
-          document.getElementById('icon-' + numId).classList.add('dNone');
-          document.getElementById('iCheck-' + numId).classList.remove('dNone');
-          document.getElementById('option-' + numId).classList.add('labelTrue');
-
-          this.accumulatedPoints(1);
-
-          document.getElementById('audioNotification').src = 'audio/check.mp3';
-          document.getElementById('audioNotification').play();
-        } else {
-          document.getElementById('icon-' + numId).classList.add('dNone');
-          document.getElementById('iError-' + numId).classList.remove('dNone');
-          document.getElementById('option-' + numId).classList.add('labelFalse');
-
-          document.getElementById('audioNotification').src = 'audio/error.mp3';
-          document.getElementById('audioNotification').play();
-        }
-
-        document.getElementById('btnSig').classList.remove('disabled');
-        document.getElementById('BoxQuestions').classList.add('disabledSolid2');
-        break;
-
-      default:
-        break;
-    }
-  }
-
   // FUNCION PARA ENVIAR EL INDEX ACTUALIZADO Y PASAR A LA PAGINA FINAL
   endQuiz = () => {
+
+    console.log('Final del quiz');
     console.log('Puntos acumulados: ' + this.state.accumulatedPoints);
 
-    // Suma de la pregunta multiple
-    let totalFinal = (this.state.accumulatedPoints * 100) / this.state.totalPoints;
+    // // Suma de la pregunta multiple
+    let totalFinal = (this.state.accumulatedPoints * 100) / (this.state.totalPoints - 1);
 
-    this.props.setScore(totalFinal);
     console.log('Puntaje total: ' + totalFinal);
+    this.props.setScore(totalFinal);
 
     this.setState({
       raw: totalFinal
@@ -149,7 +97,6 @@ class Quiz1 extends Component {
       showModal: !this.state.showModal
     })
     document.querySelector('.footer').classList.add('dNone');
-   
   }
 
   render() {
@@ -188,46 +135,12 @@ class Quiz1 extends Component {
         }
 
         <div className = { 'question d-Flex d-C j-E aI-S' } id = { 'question-' + this.state.question }>
-           <p className = 'mB-1' dangerouslySetInnerHTML = {{ __html: multimedia.questions[this.state.question].instruction }}></p>
+          {/* <p className = 'mB-1' dangerouslySetInnerHTML = {{ __html: multimedia.questions[this.state.question].instruction }}></p>
            
-          <p className = { 'labelStatement mB-1'} dangerouslySetInnerHTML = {{ __html: multimedia.questions[this.state.question].statement }}></p>
+          <p className = { 'labelStatement mB-1'} dangerouslySetInnerHTML = {{ __html: multimedia.questions[this.state.question].statement }}></p> */}
           
-          {
-            multimedia.questions[this.state.question].type === 'LabelDnD' &&
-            <DraggableFV multimedia = { multimedia.questions[this.state.question].labelDnD } 
-            accumulatedPoints = { this.accumulatedPoints } nextQuestion = {this.nextQuestion} endQuiz = {this.endQuiz}/>
-          }
-          {
-            multimedia.questions[this.state.question].type === '' &&
-            <div className='d-Flex aI-C'>
-              <div id='BoxQuestions'>
-                {
-                  multimedia.questions[this.state.question].options.map((choice, i) => {
-                    return(
-                      <div className = 'option mB-05 d-Flex j-S aI-C' key = {i} id = { 'Op-' + (i) }>
-                        <span className = { 'fa-layers icon mR-1 ' + (multimedia.questions[this.state.question].type === 'FV' ? 'dNone' : '') } id = { 'icon-' + (i) }>
-                          <FontAwesomeIcon icon="circle" className = 'circle color-6' />
-                          <p className = { 'typeLabel' }>{ choice.type }</p>
-                        </span>
-
-                        <span className = { 'fa-layers iconCheck mR-1 dNone ' + (multimedia.questions[this.state.question].type === 'FV' ? 'dNone' : '')} id = { 'iCheck-' + (i) }>
-                          <FontAwesomeIcon icon="circle" className = 'circle' />
-                          <FontAwesomeIcon icon="check" inverse transform="shrink-6" className = 'check' />
-                        </span>
-
-                        <span className = { 'fa-layers iconError mR-1 dNone ' + (multimedia.questions[this.state.question].type === 'FV' ? 'dNone' : '')} id = { 'iError-' + (i) }>
-                          <FontAwesomeIcon icon="circle" className = 'circle' />
-                          <FontAwesomeIcon icon="times" inverse transform="shrink-6" className = 'check' />
-                        </span>
-
-                        <p className = {'labelStatement optionAct3 ' + (choice.type === 'VR' ? 'labelTrue fw-7 mR-05 ': '') + (choice.type === 'FR' ? 'labelFalse fw-7 mL-05': '') } id = { 'option-' + (i) } value = { choice.value } dangerouslySetInnerHTML = {{ __html: choice.text }} onClick = { this.actividadHandle }></p>
-                      </div>
-                    )
-                  })
-                }
-              </div>
-            </div>
-          }
+          <DraggableFV multimedia = { multimedia.questions[0].labelDnD } totalPoints = {this.state.totalPoints} accumulatedPoints = { this.accumulatedPoints } nextQuestion = {this.nextQuestion} endQuiz = {this.endQuiz} question = { this.state.question } />
+          
         </div>
       </div>
     );
